@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Generate SBOM
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         run: |
           curl -Lo $RUNNER_TEMP/sbom-tool https://github.com/microsoft/sbom-tool/releases/latest/download/sbom-tool-linux-x64
           chmod +x $RUNNER_TEMP/sbom-tool
