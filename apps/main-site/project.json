@@ -1,0 +1,97 @@
+{
+  "name": "main-site",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/main-site/src",
+  "prefix": "mharmony-io",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/main-site",
+        "index": "apps/main-site/src/index.html",
+        "main": "apps/main-site/src/main.ts",
+        "polyfills": "apps/main-site/src/polyfills.ts",
+        "tsConfig": "apps/main-site/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/main-site/src/favicon.ico",
+          "apps/main-site/src/assets",
+          "apps/main-site/src/manifest.webmanifest",
+          "apps/main-site/src/manifest.webmanifest",
+          "apps/main-site/src/manifest.webmanifest"
+        ],
+        "styles": ["apps/main-site/src/styles.scss"],
+        "scripts": [],
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/main-site/ngsw-config.json"
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/main-site/src/environments/environment.ts",
+              "with": "apps/main-site/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "main-site:build:production"
+        },
+        "development": {
+          "browserTarget": "main-site:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "main-site:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/main-site/**/*.ts", "apps/main-site/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/main-site"],
+      "options": {
+        "jestConfig": "apps/main-site/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

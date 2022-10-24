@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "firsttris.vscode-jest-runner",
+    "christian-kohler.npm-intellisense",
+    "nrwl.angular-console",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense",
+    "editorconfig.editorconfig",
+    "johnpapa.angular2",
+    "cyrilletuzi.angular-schematics",
+    "Angular.ng-template"
+  ]
+}
