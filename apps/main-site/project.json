@@ -22,7 +22,13 @@
           "apps/main-site/src/manifest.webmanifest",
           "apps/main-site/src/manifest.webmanifest"
         ],
-        "styles": ["apps/main-site/src/styles.scss"],
+        "styles": [
+          "node_modules/primeicons/primeicons.css",
+          "node_modules/primeng/resources/themes/lara-dark-blue/theme.css",
+          "node_modules/primeflex/primeflex.min.css",
+          "node_modules/primeng/resources/primeng.min.css",
+          "apps/main-site/src/styles.scss"
+        ],
         "scripts": [],
         "serviceWorker": true,
         "ngswConfigPath": "apps/main-site/ngsw-config.json"
