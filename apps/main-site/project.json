@@ -20,13 +20,22 @@
           "apps/main-site/src/assets",
           "apps/main-site/src/manifest.webmanifest",
           "apps/main-site/src/manifest.webmanifest",
-          "apps/main-site/src/manifest.webmanifest"
+          "apps/main-site/src/manifest.webmanifest",
+          {
+            "glob": "**/*",
+            "input": "node_modules/primeng/resources/themes/lara-dark-blue/",
+            "output": "assets/css/themes/lara-dark-blue/"
+          },
+          {
+            "glob": "**/*",
+            "input": "node_modules/primeng/resources/themes/lara-light-blue/",
+            "output": "assets/css/themes/lara-light-blue/"
+          }
         ],
         "styles": [
-          "node_modules/primeicons/primeicons.css",
-          "node_modules/primeng/resources/themes/lara-dark-blue/theme.css",
-          "node_modules/primeflex/primeflex.min.css",
           "node_modules/primeng/resources/primeng.min.css",
+          "node_modules/primeflex/primeflex.min.css",
+          "node_modules/primeicons/primeicons.css",
           "apps/main-site/src/styles.scss"
         ],
         "scripts": [],
