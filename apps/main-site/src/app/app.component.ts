@@ -3,8 +3,7 @@ import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'mharmony-io-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
   public constructor(private primeNgConfig: PrimeNGConfig) {}

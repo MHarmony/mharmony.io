@@ -3,8 +3,7 @@ import { AppConfig } from '../../app.config';
 
 @Component({
   selector: 'mharmony-io-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent {
   public constructor(public appConfig: AppConfig) {}

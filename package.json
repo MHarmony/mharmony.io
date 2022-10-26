@@ -16,7 +16,7 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js",
-    "start": "nx serve",
+    "start": "nx serve --ssl",
     "build": "nx build",
     "test": "nx test",
     "prepare": "husky install",
@@ -44,7 +44,6 @@
     "@angular/router": "^14.2.7",
     "@angular/service-worker": "^14.2.7",
     "@nrwl/angular": "^15.0.2",
-    "ng-recaptcha": "^10.0.0",
     "ngx-logger": "^5.0.11",
     "primeflex": "^3.2.1",
     "primeicons": "^6.0.1",
