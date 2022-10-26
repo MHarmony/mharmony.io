@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/MHarmony/mharmony.io/compare/v1.0.0...v1.1.0) (2022-10-26)
+
+
+### Features
+
+* **main-site:** add header ([5d23e3b](https://github.com/MHarmony/mharmony.io/commit/5d23e3bf797bb42d5befe9f7a764ea6183286ae8))
+
 # 1.0.0 (2022-10-24)
 
 
